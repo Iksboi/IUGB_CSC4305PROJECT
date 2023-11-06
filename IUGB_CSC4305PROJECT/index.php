@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to IUGB</title>
-    <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="icon" href="logo.png">
 </head>
 <body class="body-home">
-  
+ 
     <div class="black-fill">
         <br><br>
         <div class="container">
@@ -52,7 +52,8 @@
             <img src="logo.png" >
             <h4>Welcome to IUGB</h4>
             <p>Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+                consectetur adipisicing 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aut repellendus, quia consequuntur, sunt assumenda, nisi ratione nihil voluptas amet similique repellat ipsa rerum. Repudiandae provident fugiat alias! Autem, reprehenderit.
                    .</p> 
         </section> 
         <section id="about"

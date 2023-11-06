@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Ibarra+Real+Nova&display=swap');
 
 .body-home, .body-login{
-    background: 
-}
+    background: }
+
 .black-fill {
     background: rgba(0,0 green,0 blue,0.5 alpha);
     min-height: 100vh;
@@ -85,4 +85,7 @@
 text-align: center;
 font-size: 50;
 
+}
+.w-450{
+    width: 40px;
 }
