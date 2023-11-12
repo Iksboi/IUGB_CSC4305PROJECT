@@ -1,5 +1,5 @@
 # IUGB_studmanagementsystem
-Project assigned by Dr. Kane for our Software Engineering 4305 Class.
+Project assigned by Dr. Kone for our Software Engineering 4305 Class.
 
 
 0.)Install XAMPP 
