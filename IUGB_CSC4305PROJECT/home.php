@@ -1,10 +1,11 @@
 
 <?php 
 session_start();
-if (isset($_SESSION["id"]) && $_SESSION["role"]){
+if (isset($_SESSION['id']) && isset($_SESSION['role'])){
 
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +14,11 @@ if (isset($_SESSION["id"]) && $_SESSION["role"]){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - IUGB</title>
     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="logo.png">
 </head>
 <body class="body-home">
- hello
+ 
   <div class="d-flex justify-content-center align-items-center vh-100"></div>
 <div class="shadow w-450 p-3 text-center bg-light">
 <small>Role: 
@@ -32,12 +34,12 @@ if (isset($_SESSION["id"]) && $_SESSION["role"]){
             echo"Student";
         }
         ?>
-        </br><br>
+        </b><br>
         <h3 class="display-4"><?=$_SESSION['fname']?></h3>
         <a href="logout.php" class="btn btn-warning">>
             Log out
         </a>
-    </b>   
+    </small>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js></script>

@@ -1,3 +1,5 @@
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +24,7 @@
             <h3>LOGIN</h3>
 
 
-            <?php if(isset($_GET['error'])) 
-            {?>
-            <div class="alert alert-danger" role="alert"> 
-             <?=$_GET['error']?></div>
-            <?php } ?>
+            
 
             <div class="mb-3">
                 <label  class="form-label">Username</label>
@@ -46,11 +44,11 @@
                 <select class="form-control"
                 name="role">
                     <option value="1">Admin</option> 
-                    <option value="2">Teacher</option> 
-                    <option value="3">Student</option> </select>
+                    <option value="2">Student</option> 
+                    <option value="3">Teacher</option> </select>
                
             <button type="submit" class="btn btn-primary">Login</button>
-            <a href="index.php" class="text-decoration-none"></a>
+            <a href="index.php" class="text-decoration-none">Cancel</a>
             </form>
                     <br>
                     <div class="text-center text-light">
@@ -63,3 +61,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js></script>
 </body>
 </html>
+            -->
