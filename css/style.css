@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Ibarra+Real+Nova&display=swap');
+
+
+
+.black-fill {
+    background: rgba(0,0 green,0 blue,0.5 alpha);
+    min-height: 100vh;
+     
+}  
+.homeNav{
+    background: rgba(255, 255 green, 255 blue,0.7 alpha) !important;
+}
+.welcom-text  {
+   min-height:80vh;
+   border-radius: 10px;
+}
+.welcom-text img {
+    width: 100px;
+
+}
+.welcom-text h4 {
+    color: #eee;
+    font-size: 51px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.welcom-text p {
+    color: #222;
+    background: rgba(255, 255 green, 255 blue,0.5 alpha) ;
+    padding:5px;
+    border-radius: 4px;
+ 
+}
+ #about{
+    min-height: 100vh;
+ }
+ #about h5{
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+
+ }
+ #contact{
+    min-height: 100vh;}
+
+
+#contact form{
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255 green, 255 blue,0.5 alpha) ;
+    padding: 20px;
+}
+#contact form h3{
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+ #about card-1{
+
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255 green, 255 blue,0.5 alpha) ;
+    padding: 20px;
+    border-radius:5px ;
+
+ }
+ #about card-1 h5{
+
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+
+ }
+ textarea{
+    resize: none;
+ }
+ .login{
+    max-width: 500px;
+    width: 90%;
+    background: rgba(255, 255 green, 255 blue,0.5 alpha) ;
+    padding: 10px;
+    border-radius: 10px;
+ }
+.login h3{
+text-align: center;
+font-size: 50;
+
+}
+.w-450{
+    width: 40px;
+}
