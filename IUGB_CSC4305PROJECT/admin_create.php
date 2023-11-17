@@ -3,14 +3,19 @@
 include 'DB_connection.php';
 
 if(isset($_POST['submit'])) {
+
     $username=$_POST['username'];
     $password=$_POST['password'];
-    $fullname=$_POST['fname'];
+    $firstname=$_POST['fname'];
+    $lastname=$_POST['lname'];
     $date_of_birth=$_POST['date_of_birth'];
+    $id = "10" . substr(uniqid(), 7, 6);
 
-    $sql="INSERT INTO `admin` (username, password, fname, date_of_birth)
-          VALUES ('$username', '$password', '$fullname', '$date_of_birth')";
+    
 
+    $sql="INSERT INTO `admin` (username, password, fname, lname, date_of_birth,admin_crea_date,u_id)
+    
+    VALUES ('$username', '$password', '$firstname','$lastname', '$date_of_birth', NOW(),'id')";
     $result=mysqli_query($con,$sql);
 
     if($result){
@@ -60,10 +65,16 @@ if(isset($_POST['submit'])) {
                 name="password"> 
             </div>
             <div class="mb-3">
-                <label  class="form-label">Fullname</label>
+                <label  class="form-label">First name</label>
                 <input type="text" 
                 class="form-control"
                 name="fname"> 
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Last name</label>
+                <input type="text" 
+                class="form-control"
+                name="lname"> 
             </div>
             <div class="mb-3">
                 <label  class="form-label">Date of birth</label>
@@ -71,7 +82,7 @@ if(isset($_POST['submit'])) {
                 class="form-control"
                 name="date_of_birth"> 
             </div>
-            
+          
                
             <button type="submit" class="btn btn-primary" name="submit">Confirm</button>
             <a href="index.php" class="text-decoration-none">Cancel</a>
