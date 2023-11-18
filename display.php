@@ -29,6 +29,8 @@ include 'DB_connection.php';
       <th scope="col">Password</th>
       <th scope="col">Date of Birth</th>
       <th scope="col">Account creation date</th>
+      <th scope="col">Last Update </th>
+      <th scope="col">Operations</th>
     
     </tr>
   </thead>
@@ -45,7 +47,7 @@ include 'DB_connection.php';
             $password=$row['password'];
             $date_of_birth=$row['date_of_birth'];
             $admin_creat_date=$row['admin_creat_date'];
-           
+            $admin_update_date=$row['admin_update_date'];
             echo
             '<tr> <th scope="row">'.$id.'</th>
             <td>'.$fullname.'</td>
@@ -54,6 +56,12 @@ include 'DB_connection.php';
             <td>'.$password.'</td>
             <td>'.$date_of_birth.'</td>
             <td>'.$admin_creat_date.'</td>
+            <td>'.$admin_update_date.'</td>
+            <td>
+            <button class="btn btn-primary"><a href="update.php? updateid='.$id.'" class=text-light >Update</a></button>
+            <button class="btn btn-danger"><a href="delete.php? deleteid='.$id.'" class=text-light>Delete</a></button>
+            </td>
+            
                   <tr>';    
 
     }
@@ -64,9 +72,6 @@ include 'DB_connection.php';
   
     
 
-
-
-    
 
 </div> 
 
