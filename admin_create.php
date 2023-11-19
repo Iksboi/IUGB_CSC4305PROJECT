@@ -9,7 +9,7 @@ if(isset($_POST['submit'])) {
     $firstname=$_POST['fname'];
     $lastname=$_POST['lname'];
     $date_of_birth=$_POST['date_of_birth'];
-    $id = "10" . sprintf("%06d", rand(0, 999999));
+    $id = "08" . sprintf("%06d", rand(0, 999999));
   
 
 
@@ -32,6 +32,24 @@ if(isset($_POST['submit'])) {
         die(mysqli_error($con));
     }
 }
+function generateUniqueAdminID() {
+    // Generate a unique ID of 6 digits starting with '10'
+    $id = "80" . sprintf("%04d", rand(0, 9999));
+
+    // Check if the generated ID already exists in the database
+    global $con;
+    $query = "SELECT u_id FROM admin WHERE u_id = '$id'";
+    $result = mysqli_query($con, $query);
+
+    // If the ID already exists, regenerate it
+    while (mysqli_num_rows($result) > 0) {
+        $id = "80" . sprintf("%04d", rand(0, 9999));
+        $result = mysqli_query($con, "SELECT ut_id FROM admin WHERE u_id = '$id'");
+    }
+
+    return $id;
+}
+?>
 ?>
 
 
@@ -50,7 +68,7 @@ if(isset($_POST['submit'])) {
     <div class="container">
         <br><br>
        
-        ``
+        ``<h3>Add a new Admin</h3>
 
 
             <form method="post">
@@ -60,7 +78,7 @@ if(isset($_POST['submit'])) {
 
             </div>
 
-            <h3>Add a user</h3>
+            <h3>Add an admin</h3>
 
             <div class="mb-3">
 

@@ -4,11 +4,11 @@ include'DB_connection.php';
 if (isset($_GET['deleteid'])) { 
 
 $id=$_GET['deleteid'];
-$sql="delete from `admin` where u_id=$id";
+$sql="delete from `student` where student_id=$id";
 $result=mysqli_query($con,$sql);
 
 if ($result) {
-  header("location:display.php");
+  header("location:display_student.php");
 
 }else{
 

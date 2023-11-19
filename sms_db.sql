@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2023 at 08:46 PM
+-- Generation Time: Nov 19, 2023 at 07:04 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -28,19 +28,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `u_id` int(11) NOT NULL,
+  `u_id` varchar(6) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
-  `date_of_birth` date NOT NULL
+  `lname` varchar(50) NOT NULL,
+  `date_of_birth` date NOT NULL,
+  `admin_creat_date` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `admin_update_date` datetime(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`u_id`, `username`, `password`, `fname`, `date_of_birth`) VALUES
-(0, 'admin', 'admin', 'Sory Koïta', '2023-11-15');
+INSERT INTO `admin` (`u_id`, `username`, `password`, `fname`, `lname`, `date_of_birth`, `admin_creat_date`, `admin_update_date`) VALUES
+('084706', 'Yeke', 'pedale01*', 'Yanis', 'Kiema', '2001-06-19', '2023-11-19 15:16:04.000000', '2023-11-19 16:45:55.000000'),
+('085396', 'Galen', 'Loinvoyant=mort', 'Galen', 'Loinvoyant', '1636-05-21', '2023-11-19 17:57:27.000000', NULL);
 
 -- --------------------------------------------------------
 
@@ -63,14 +67,23 @@ CREATE TABLE `course` (
 --
 
 CREATE TABLE `student` (
-  `student_id` int(11) NOT NULL,
+  `student_id` int(6) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
   `date_of_birth` date NOT NULL,
   `student_creat_date` date NOT NULL,
-  `u_id` int(6) NOT NULL
+  `u_id` int(6) NOT NULL,
+  `student_update_date` datetime(6) DEFAULT NULL,
+  `lname` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`student_id`, `username`, `password`, `fname`, `date_of_birth`, `student_creat_date`, `u_id`, `student_update_date`, `lname`) VALUES
+(104748, 'Test', 'Pass', 'Hassan', '1989-02-12', '2023-11-19', 0, '2023-11-19 17:51:45.000000', 'II Vérité Loinvoyant');
 
 -- --------------------------------------------------------
 
@@ -83,8 +96,18 @@ CREATE TABLE `teacher` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
-  `teacher_crea_date` date NOT NULL
+  `teacher_creat_date` date NOT NULL,
+  `lname` varchar(55) NOT NULL,
+  `teacher_update_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `teacher`
+--
+
+INSERT INTO `teacher` (`u_id`, `username`, `password`, `fname`, `teacher_creat_date`, `lname`, `teacher_update_date`) VALUES
+(92123, 'Umbre', 'TombedansLabime', 'Umbre', '2023-11-19', 'Tombétoile', NULL),
+(9931095, 'teacher', 'SexEducztip,', 'Tom', '2023-11-19', 'jedusor', '2023-11-19');
 
 --
 -- Indexes for dumped tables

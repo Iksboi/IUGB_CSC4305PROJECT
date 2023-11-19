@@ -4,7 +4,7 @@ include 'DB_connection.php';
 
 
 $id=$_GET['updateid'];
-$sql="select *from `admin` where u_id=$id ";
+$sql="select *from `student` where student_id=$id ";
 $result=mysqli_query($con,$sql);
 $row=mysqli_fetch_assoc($result);
 $firstname=$row['fname'];
@@ -22,15 +22,15 @@ if(isset($_POST['submit'])) {
     $date_of_birth=$_POST['date_of_birth'];
   
   
-    $sql="update `admin` set username='$username', password='$password', 
+    $sql="update `student` set username='$username', password='$password', 
 
-    fname='$firstname', lname='$lastname',date_of_birth='$date_of_birth', admin_update_date=NOW() where u_id=$id" ;
+    fname='$firstname', lname='$lastname',date_of_birth='$date_of_birth', student_update_date=NOW() where student_id=$id" ;
 
     $result=mysqli_query($con,$sql);
 
     if($result){
 
-     header("location:display.php");
+     header("location:display_student.php");
     }
      else 
 
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Update Admin - IUGB</title>
+<title>Update Student - IUGB</title>
 <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
 <link rel="icon" href="C:\xampp\htdocs\school management system\img\Logo">
 </head>
