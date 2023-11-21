@@ -15,4 +15,9 @@ C:\xampp\htdocs or wherever you installed XAMPP, just place it on the HTdocs.
 3.) Then go on your browser and type :"Localhost/IUGB_CSC4305PROJECT" OR "Localhost:8080/IUGB_CSC4305PROJECT" If you changed your port to 8080.
 
 
-4.) Please make sure to test LOCALLY any changes and fix your bugs before submitting any Pull Request
+4.) You will have to import the database into your DBMS(I'd recommend you PHPMYADMIN )
+
+
+
+
+Please make sure to test LOCALLY any changes and fix your bugs before submitting any Pull Request
