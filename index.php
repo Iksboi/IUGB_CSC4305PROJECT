@@ -16,7 +16,7 @@
         id="homeNav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                    <img src="C:\xampp\htdocs\school management system\img\logo\logo.png" width="40" >
+                    <img src="img\logo\logo.png" width="40" >
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
                 </div>
         </nav>  
         <section class="welcome-text d-flex justify-content-center align-items-center flex-column">
-            <img src="logo.png" >
+            <img src="img\logo\logo2.jpg" >
             <h4>Welcome to IUGB</h4>
             <p>Lorem ipsum dolor sit amet,
                 consectetur adipisicing 
@@ -61,7 +61,7 @@
         <div class="card mb-3 card-1">
         <div class="row g-0">
             <div class="col-md-4">
-            <img src="logo.png" class="img-fluid rounded-start">
+            <img src="img\logo\logo.png" class="img-fluid rounded-start">
             </div>
             <div class="col-md-8">
             <div class="card-body">
