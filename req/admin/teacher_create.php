@@ -58,7 +58,7 @@ function generateUniqueTeacherID() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Add User - IUGB</title>
 <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
-<link rel="icon" href="img\logo\logo.png">
+<link rel="icon" href="C:\xampp\htdocs\IUGB_CSC4305PROJECT\img\icons\dean.png">
 </head>
 
 <body>
@@ -71,7 +71,7 @@ function generateUniqueTeacherID() {
 
             <form method="post">
             <div class="text-center"> 
-            <img src ="logo.png"
+            <img src ="img\icons\dean.png"
                  width="100">
 
             </div>
@@ -124,7 +124,7 @@ function generateUniqueTeacherID() {
           
                
             <button type="submit" class="btn btn-primary" name="submit">Confirm</button>
-            <a href="index.php" class="text-decoration-none">Cancel</a>
+            <a href="admin_home.php" class="text-decoration-none">Cancel</a>
             </form>
                     <br>
                     <div class="text-center text-light">
@@ -135,6 +135,6 @@ function generateUniqueTeacherID() {
                 
                 </div>
                 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -128,7 +128,7 @@ function generateUniqueAdminID() {
           
                
             <button type="submit" class="btn btn-primary" name="submit">Confirm</button>
-            <a href="index.php" class="text-decoration-none">Cancel</a>
+            <a href="admin_home.php" class="text-decoration-none">Cancel</a>
             </form>
                     <br>
                     <div class="text-center text-light">

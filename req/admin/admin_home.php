@@ -21,18 +21,18 @@
           <div class="card-body">
             <h5 class="card-title">Add Admin </h5>
             <p class="card-text">Click here to add a new administrator of the system.</p>
-            <a href="admin\admin_create.php" class="btn btn-primary">Add</a>
+            <a href="admin_create.php" class="btn btn-primary">Add</a>
           </div>
           </div>
         </div>
         <div class="col-xs-6">
            
         <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <img src="img\icons\dean.png" class="card-img-top" >
           <div class="card-body">
             <h5 class="card-title">Add teacher  </h5>
             <p class="card-text">Click here to add a new teacher in the university.</p>
-            <a href="admin\teacher_create.php" class="btn btn-primary">Add</a>
+            <a href="teacher_create.php" class="btn btn-primary">Add</a>
           </div>
         </div>
         </div>
@@ -42,7 +42,7 @@
       <div class="card-body">
         <h5 class="card-title">Add student  </h5>
         <p class="card-text">Click here to add a new student in the university.</p>
-        <a href="admin\student_create.php" class="btn btn-primary">Add</a>
+        <a href="student_create.php" class="btn btn-primary">Add</a>
           </div>
           </div>
           </div>
