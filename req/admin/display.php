@@ -36,6 +36,7 @@ include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
     </tr>
   </thead>
   <tbody>
+  <a href="admin_home.php" class="text-decoration-none">Go back to homepage</a>
     <?php
     $sql="Select * from `admin`";
     $result=mysqli_query($con,$sql);

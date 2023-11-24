@@ -16,18 +16,21 @@
   <div class="col-sm-4 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Admin</h5>
-        <p class="card-text">Add, modify or delete an admin.</p>
-        <a href="admin_dashboard.php" class="btn btn-primary">Go to Admins</a>
+        <h5 class="card-title">List of admins</h5>
+        <p class="card-text">View the list of Admins.</p>
+        <a href="display.php" class="btn btn-primary">View</a>
+    
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <a href="admin_home.php" class="text-decoration-none">Go back to homepage</a>
+  </div>
+ <!-- <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Teacher</h5>
         <p class="card-text">Add, modify or delete a teacher.</p>
-        <a href="admin_teacher_dashboard.php" class="btn btn-primary">Go to teachers</a>
+        <a href="#" class="btn btn-primary">Go to teachers</a>
       </div>
     </div>
   </div>
@@ -36,7 +39,7 @@
       <div class="card-body">
         <h5 class="card-title">Student</h5>
         <p class="card-text">Add, modify or delete a student.</p>
-        <a href="admin_student_dashboard.php" class="btn btn-primary">Go to students</a>
+        <a href="#" class="btn btn-primary">Go to students</a>
       </div>
     </div>
   </div>
@@ -44,7 +47,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Course</h5>
-        <p class="card-text">Add, assign, modify or delete a course.</p>
+        <p class="card-text">Add, modify or delete a course.</p>
         <a href="#" class="btn btn-primary">Go to courses</a>
       </div>
     </div>
@@ -71,7 +74,7 @@ Add courses
 
 
 
-
+-->
 
 
 
