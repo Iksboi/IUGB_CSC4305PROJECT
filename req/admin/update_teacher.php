@@ -1,6 +1,17 @@
 
 <?php
-include 'DB_connection.php';
+include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
+
+
+$id=$_GET['updateid'];
+$sql="select *from `teacher` where u_id=$id ";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_assoc($result);
+$firstname=$row['fname'];
+$lastname=$row['lname'];
+$username=$row['username'];
+$password=$row['password'];
+
 
 if(isset($_POST['submit'])) {
 
@@ -8,23 +19,18 @@ if(isset($_POST['submit'])) {
     $password=$_POST['password'];
     $firstname=$_POST['fname'];
     $lastname=$_POST['lname'];
-    $date_of_birth=$_POST['date_of_birth'];
-    $id = generateUniqueID();
+    
   
+  
+    $sql="update `teacher` set username='$username', password='$password', 
 
-
-
-    
-
-    $sql="INSERT INTO `student` (username, password, fname, lname, date_of_birth, student_creat_date, student_id)
-    
-    VALUES ('$username', '$password', '$firstname','$lastname', '$date_of_birth', NOW(),'$id')";
+    fname='$firstname', lname='$lastname', teacher_update_date=NOW() where u_id=$id" ;
 
     $result=mysqli_query($con,$sql);
 
     if($result){
 
-     header("location:display_student.php");
+     header("location:display_teacher.php");
     }
      else 
 
@@ -33,23 +39,6 @@ if(isset($_POST['submit'])) {
     }
 }
 
-function generateUniqueID() {
-    // Generate a unique ID of 6 digits starting with '10'
-    $id = "10" . sprintf("%04d", rand(0, 9999));
-
-    // Check if the generated ID already exists in the database
-    global $con;
-    $query = "SELECT student_id FROM student WHERE student_id = '$id'";
-    $result = mysqli_query($con, $query);
-
-    // If the ID already exists, regenerate it
-    while (mysqli_num_rows($result) > 0) {
-        $id = "10" . sprintf("%04d", rand(0, 9999));
-        $result = mysqli_query($con, "SELECT student_id FROM student WHERE student_id = '$id'");
-    }
-
-    return $id;
-}
 ?>
 
 
@@ -58,9 +47,9 @@ function generateUniqueID() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Add a student- IUGB</title>
+<title>Update Teacher - IUGB</title>
 <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
-<link rel="icon" href="C:\xampp\htdocs\school management system\img\Logo">
+<link rel="icon" href="img\logo\logo.png">
 </head>
 
 <body>
@@ -68,7 +57,7 @@ function generateUniqueID() {
     <div class="container">
         <br><br>
        
-        ``<h3>Add a new student</h3>
+        ``
 
 
             <form method="post">
@@ -78,7 +67,7 @@ function generateUniqueID() {
 
             </div>
 
-           
+            <h3>Add a user</h3>
 
             <div class="mb-3">
 
@@ -86,7 +75,9 @@ function generateUniqueID() {
                 <input type="text" 
                 class="form-control"
                 name="username"
-                >
+                value=<?php
+                echo $username;               
+                ?>>
 
             </div>
 
@@ -95,7 +86,10 @@ function generateUniqueID() {
                 <label  class="form-label">Password</label>
                 <input type="password" 
                 class="form-control"
-                name="password"> 
+                name="password"
+                value=<?php
+                echo $password;               
+                ?>> 
 
             </div>
 
@@ -104,7 +98,10 @@ function generateUniqueID() {
                 <label  class="form-label">First name</label>
                 <input type="text" 
                 class="form-control"
-                name="fname"> 
+                name="fname"
+                value=<?php
+                echo $firstname;               
+                ?>> 
 
             </div>
             <div class="mb-3">
@@ -112,21 +109,18 @@ function generateUniqueID() {
                 <label  class="form-label">Last name</label>
                 <input type="text" 
                 class="form-control"
-                name="lname"> 
+                name="lname"
+                value=<?php
+                echo $lastname;               
+                ?>> 
 
             </div>
-            <div class="mb-3">
-
-                <label  class="form-label">Date of birth</label>
-                <input type="date" 
-                class="form-control"
-                name="date_of_birth"> 
-
-            </div>
+          
+            
 
           
                
-            <button type="submit" class="btn btn-primary" name="submit">Confirm</button>
+            <button type="submit" class="btn btn-primary" name="submit">Update</button>
             <a href="index.php" class="text-decoration-none">Cancel</a>
             </form>
                     <br>

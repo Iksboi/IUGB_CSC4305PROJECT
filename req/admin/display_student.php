@@ -1,5 +1,5 @@
 <?php
-include 'DB_connection.php';
+include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -9,15 +9,15 @@ include 'DB_connection.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operations</title>
     <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
-    <link rel="icon" href="C:\xampp\htdocs\school management system\img\Logo">
+    <link rel="icon" href="img\logo\logo.png">
 </head>
 <body>
     
 
 
 <div class="container">
-<h3>List of Admin</h3>
-<button  class="btn btn-primary my-5"><a href="admin_create.php" class="text-light">Add user</a> </button>
+<h3>List of  students</h3>
+<button  class="btn btn-primary my-5"><a href="student_create.php" class="text-light">Add user</a> </button>
 
 <table class="table">
   <thead>
@@ -36,18 +36,18 @@ include 'DB_connection.php';
   </thead>
   <tbody>
     <?php
-    $sql="Select * from `admin`";
+    $sql="Select * from `student`";
     $result=mysqli_query($con,$sql);
     if($result){
         while($row = mysqli_fetch_assoc($result)){
-            $id=$row['u_id'];
+            $id=$row['student_id'];
             $fullname=$row['fname'];
             $lastname=$row['lname'];
             $username=$row['username'];
             $password=$row['password'];
             $date_of_birth=$row['date_of_birth'];
-            $admin_creat_date=$row['admin_creat_date'];
-            $admin_update_date=$row['admin_update_date'];
+            $student_creat_date=$row['student_creat_date'];
+            $student_update_date=$row['student_update_date'];
             echo
             '<tr> <th scope="row">'.$id.'</th>
             <td>'.$fullname.'</td>
@@ -55,11 +55,11 @@ include 'DB_connection.php';
             <td>'.$username.'</td>
             <td>'.$password.'</td>
             <td>'.$date_of_birth.'</td>
-            <td>'.$admin_creat_date.'</td>
-            <td>'.$admin_update_date.'</td>
+            <td>'.$student_creat_date.'</td>
+            <td>'.$student_update_date.'</td>
             <td>
-            <button class="btn btn-primary"><a href="update.php? updateid='.$id.'" class=text-light >Update</a></button>
-            <button class="btn btn-danger"><a href="delete.php? deleteid='.$id.'" class=text-light>Delete</a></button>
+            <button class="btn btn-primary"><a href="update_student.php? updateid='.$id.'" class=text-light >Update</a></button>
+            <button class="btn btn-danger"><a href="delete_student.php? deleteid='.$id.'" class=text-light>Delete</a></button>
             </td>
             
                   <tr>';    

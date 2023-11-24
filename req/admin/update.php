@@ -1,6 +1,17 @@
 
 <?php
-include 'DB_connection.php';
+include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
+
+
+$id=$_GET['updateid'];
+$sql="select *from `admin` where u_id=$id ";
+$result=mysqli_query($con,$sql);
+$row=mysqli_fetch_assoc($result);
+$firstname=$row['fname'];
+$lastname=$row['lname'];
+$username=$row['username'];
+$password=$row['password'];
+$date_of_birth=$row['date_of_birth'];
 
 if(isset($_POST['submit'])) {
 
@@ -9,16 +20,11 @@ if(isset($_POST['submit'])) {
     $firstname=$_POST['fname'];
     $lastname=$_POST['lname'];
     $date_of_birth=$_POST['date_of_birth'];
-    $id = "08" . sprintf("%06d", rand(0, 999999));
   
+  
+    $sql="update `admin` set username='$username', password='$password', 
 
-
-
-    
-
-    $sql="INSERT INTO `admin` (username, password, fname, lname, date_of_birth, admin_creat_date, u_id)
-    
-    VALUES ('$username', '$password', '$firstname','$lastname', '$date_of_birth', NOW(),'$id')";
+    fname='$firstname', lname='$lastname',date_of_birth='$date_of_birth', admin_update_date=NOW() where u_id=$id" ;
 
     $result=mysqli_query($con,$sql);
 
@@ -32,24 +38,7 @@ if(isset($_POST['submit'])) {
         die(mysqli_error($con));
     }
 }
-function generateUniqueAdminID() {
-    // Generate a unique ID of 6 digits starting with '10'
-    $id = "80" . sprintf("%04d", rand(0, 9999));
 
-    // Check if the generated ID already exists in the database
-    global $con;
-    $query = "SELECT u_id FROM admin WHERE u_id = '$id'";
-    $result = mysqli_query($con, $query);
-
-    // If the ID already exists, regenerate it
-    while (mysqli_num_rows($result) > 0) {
-        $id = "80" . sprintf("%04d", rand(0, 9999));
-        $result = mysqli_query($con, "SELECT ut_id FROM admin WHERE u_id = '$id'");
-    }
-
-    return $id;
-}
-?>
 ?>
 
 
@@ -58,9 +47,9 @@ function generateUniqueAdminID() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Add User - IUGB</title>
+<title>Update Admin - IUGB</title>
 <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css>
-<link rel="icon" href="C:\xampp\htdocs\school management system\img\Logo">
+<link rel="icon" href="img\logo\logo.png">
 </head>
 
 <body>
@@ -68,7 +57,7 @@ function generateUniqueAdminID() {
     <div class="container">
         <br><br>
        
-        ``<h3>Add a new Admin</h3>
+        ``
 
 
             <form method="post">
@@ -78,7 +67,7 @@ function generateUniqueAdminID() {
 
             </div>
 
-            <h3>Add an admin</h3>
+            <h3>Add a user</h3>
 
             <div class="mb-3">
 
@@ -86,7 +75,9 @@ function generateUniqueAdminID() {
                 <input type="text" 
                 class="form-control"
                 name="username"
-                >
+                value=<?php
+                echo $username;               
+                ?>>
 
             </div>
 
@@ -95,7 +86,10 @@ function generateUniqueAdminID() {
                 <label  class="form-label">Password</label>
                 <input type="password" 
                 class="form-control"
-                name="password"> 
+                name="password"
+                value=<?php
+                echo $password;               
+                ?>> 
 
             </div>
 
@@ -104,7 +98,10 @@ function generateUniqueAdminID() {
                 <label  class="form-label">First name</label>
                 <input type="text" 
                 class="form-control"
-                name="fname"> 
+                name="fname"
+                value=<?php
+                echo $firstname;               
+                ?>> 
 
             </div>
             <div class="mb-3">
@@ -112,7 +109,10 @@ function generateUniqueAdminID() {
                 <label  class="form-label">Last name</label>
                 <input type="text" 
                 class="form-control"
-                name="lname"> 
+                name="lname"
+                value=<?php
+                echo $lastname;               
+                ?>> 
 
             </div>
             <div class="mb-3">
@@ -120,13 +120,16 @@ function generateUniqueAdminID() {
                 <label  class="form-label">Date of birth</label>
                 <input type="date" 
                 class="form-control"
-                name="date_of_birth"> 
+                name="date_of_birth"
+                value=<?php
+                echo $date_of_birth;               
+                ?>> 
 
             </div>
 
           
                
-            <button type="submit" class="btn btn-primary" name="submit">Confirm</button>
+            <button type="submit" class="btn btn-primary" name="submit">Update</button>
             <a href="index.php" class="text-decoration-none">Cancel</a>
             </form>
                     <br>
@@ -138,6 +141,6 @@ function generateUniqueAdminID() {
                 
                 </div>
                 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js></script>
 </body>
 </html>

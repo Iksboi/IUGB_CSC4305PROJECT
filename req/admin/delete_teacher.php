@@ -1,6 +1,6 @@
 <?php
 
-include'DB_connection.php';
+include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
 if (isset($_GET['deleteid'])) { 
 
 $id=$_GET['deleteid'];
