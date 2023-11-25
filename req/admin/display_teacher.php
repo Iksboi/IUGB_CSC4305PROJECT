@@ -43,7 +43,7 @@ include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
     $result=mysqli_query($con,$sql);
     if($result){
         while($row = mysqli_fetch_assoc($result)){
-            $id=$row['u_id'];
+            $id=$row['teacher_id'];
             $fullname=$row['fname'];
             $lastname=$row['lname'];
             $username=$row['username'];

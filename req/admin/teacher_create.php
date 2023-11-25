@@ -15,7 +15,7 @@ if(isset($_POST['submit'])) {
 
     
 
-    $sql="INSERT INTO `teacher` (username, password, fname, lname,  teacher_creat_date, u_id)
+    $sql="INSERT INTO `teacher` (username, password, fname, lname,  teacher_creat_date, teacher_id)
     
     VALUES ('$username', '$password', '$firstname','$lastname',  NOW(),'$id')";
 
@@ -37,13 +37,13 @@ function generateUniqueTeacherID() {
 
     // Check if the generated ID already exists in the database
     global $con;
-    $query = "SELECT u_id FROM teacher WHERE u_id = '$id'";
+    $query = "SELECT teacher_id FROM teacher WHERE teacher_id = '$id'";
     $result = mysqli_query($con, $query);
 
     // If the ID already exists, regenerate it
     while (mysqli_num_rows($result) > 0) {
         $id = "90" . sprintf("%04d", rand(0, 9999));
-        $result = mysqli_query($con, "SELECT ut_id FROM teacher WHERE u_id = '$id'");
+        $result = mysqli_query($con, "SELECT teacher_id FROM teacher WHERE teacher_id = '$id'");
     }
 
     return $id;

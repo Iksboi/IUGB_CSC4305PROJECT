@@ -4,7 +4,7 @@ include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
 
 
 $id=$_GET['updateid'];
-$sql="select *from `teacher` where u_id=$id ";
+$sql="select *from `teacher` where teacher_id=$id ";
 $result=mysqli_query($con,$sql);
 $row=mysqli_fetch_assoc($result);
 $firstname=$row['fname'];
@@ -24,7 +24,7 @@ if(isset($_POST['submit'])) {
   
     $sql="update `teacher` set username='$username', password='$password', 
 
-    fname='$firstname', lname='$lastname', teacher_update_date=NOW() where u_id=$id" ;
+    fname='$firstname', lname='$lastname', teacher_update_date=NOW() where teacher_id=$id" ;
 
     $result=mysqli_query($con,$sql);
 
