@@ -17,7 +17,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">List of teachers</h5>
-        <p class="card-text">View the list of Admins.</p>
+        <p class="card-text">View the list of teachers.</p>
         <a href="display_teacher.php" class="btn btn-primary">View</a>
     
       </div>

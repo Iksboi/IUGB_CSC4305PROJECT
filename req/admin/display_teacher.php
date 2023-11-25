@@ -18,6 +18,10 @@ include 'C:\xampp\htdocs\IUGB_CSC4305PROJECT\DB_connection.php';
 <div class="container">
 <h3>List of teachers</h3>
 <button  class="btn btn-primary my-5"><a href="teacher_create.php" class="text-light">Add a teacher</a> </button>
+</div>
+  <a href="admin_home.php" class="text-decoration-none">Go back to homepage</a>
+  </div>
+
 
 <table class="table">
   <thead>

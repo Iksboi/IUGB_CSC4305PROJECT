@@ -45,7 +45,7 @@
       <div class="card-body">
         <h5 class="card-title">Course</h5>
         <p class="card-text">Add, assign, modify or delete a course.</p>
-        <a href="#" class="btn btn-primary">Go to courses</a>
+        <a href="admin_course_dashboard.php" class="btn btn-primary">Go to courses</a>
       </div>
     </div>
   </div>

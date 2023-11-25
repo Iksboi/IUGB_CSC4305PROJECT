@@ -16,9 +16,9 @@
   <div class="col-sm-4 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">List of students</h5>
-        <p class="card-text">View the list of students.</p>
-        <a href="display_student.php" class="btn btn-primary">View</a>
+        <h5 class="card-title">List of course</h5>
+        <p class="card-text">View the list of course.</p>
+        <a href="display_course.php" class="btn btn-primary">View</a>
     
       </div>
     </div>
