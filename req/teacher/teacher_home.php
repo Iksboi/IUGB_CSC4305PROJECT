@@ -1,4 +1,21 @@
 
+<?php
+session_start();
+
+// Retrieve the teacher's ID from the session
+if (isset($_SESSION['teacher_id'])) {
+    $teacher_id = $_SESSION['teacher_id'];
+
+    echo "teacher ID: $teacher_id";
+
+} else {
+    echo "teacher ID not found in the session.";
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

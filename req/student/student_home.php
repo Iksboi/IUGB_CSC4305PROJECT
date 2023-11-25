@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Retrieve the student's ID from the session
+if (isset($_SESSION['student_id'])) {
+    $student_id = $_SESSION['student_id'];
+
+    echo "Student ID: $student_id";
+
+} else {
+    echo "Student ID not found in the session.";
+}
+?>
 
 
 <!DOCTYPE html>
