@@ -11,18 +11,26 @@
     <div class="black-fill">
         <br><br>
         <div class="d-flex justify-content-center align-items-center flex-column">
+        <?php if (!empty($errorMessage)): ?>
+        <div class="mt-2 alert alert-danger alert-dismissible fade show text-center" role="alert">
+          <strong><?php echo $errorMessage; ?></strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <?php endif; ?>
             <form class="login" method="post" action="req/login.php">
                 <div class="text-center"> 
-                    <img src="img\logo\logo.png" width="100"> <!-- Assure-toi que le chemin vers ton logo est correct -->
+                    <img src="img\logo\logo.png" width="100"> 
                 </div>
-                <h3>LOGIN</h3>
+                <h3>LOG-IN</h3>
                 <div class="mb-3">
+                    
+      
                     <label class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username">
+                    <input type="text" class="form-control" name="username" placeholder="Enter your username" required >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password"> 
+                    <input type="password" class="form-control" name="password" placeholder="Enter your password" required> 
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
                 <a href="index.php" class="text-decoration-none">Cancel</a>

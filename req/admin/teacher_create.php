@@ -83,7 +83,7 @@ function generateUniqueTeacherID() {
                 <input type="text" 
                 class="form-control"
                 name="username"
-                >
+                required>
 
             </div>
 
@@ -92,7 +92,8 @@ function generateUniqueTeacherID() {
                 <label  class="form-label">Password</label>
                 <input type="password" 
                 class="form-control"
-                name="password"> 
+                name="password"
+                required> 
 
             </div>
 
@@ -101,7 +102,8 @@ function generateUniqueTeacherID() {
                 <label  class="form-label">First name</label>
                 <input type="text" 
                 class="form-control"
-                name="fname"> 
+                name="fname"
+                required> 
 
             </div>
             <div class="mb-3">
@@ -109,7 +111,7 @@ function generateUniqueTeacherID() {
                 <label  class="form-label">Last name</label>
                 <input type="text" 
                 class="form-control"
-                name="lname"> 
+                name="lname" required> 
 
             </div>
             <div class="mb-3">
@@ -117,7 +119,7 @@ function generateUniqueTeacherID() {
                 <label  class="form-label">Date of birth</label>
                 <input type="date" 
                 class="form-control"
-                name="date_of_birth"> 
+                name="date_of_birth" required> 
 
             </div>
 

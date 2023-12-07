@@ -70,7 +70,8 @@ if(isset($_POST['submit'])) {
                 name="course_name"
                 value=<?php
                 echo $course_name;               
-                ?>>
+                ?>
+                >
 
             </div>
 

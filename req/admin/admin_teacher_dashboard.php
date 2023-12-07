@@ -23,5 +23,16 @@
       </div>
     </div>
   </div>
+  <div class="row no-gutters">
+  <div class="col-sm-4 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Assign course to a teacher</h5>
+        <p class="card-text">View the list of teachers.</p>
+        <a href="assign_course_teacher.php" class="btn btn-primary">View</a>
+    
+      </div>
+    </div>
+  </div>
   <a href="admin_home.php" class="text-decoration-none">Go back to homepage</a>
   </div>

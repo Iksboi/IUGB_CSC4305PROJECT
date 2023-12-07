@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - IUGB</title>
     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css\style.css">
     <link rel="icon" href="img\logo\logo.png">
 </head>
 <body class="body-home">
@@ -50,7 +50,7 @@
     </div>
   </div>
 </div>
-
+<a href="..\..\logout.php" class="text-decoration-none">Log out </a> 
 <br>
 
 

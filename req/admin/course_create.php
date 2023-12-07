@@ -6,17 +6,17 @@ if(isset($_POST['submit'])) {
 
     $course_name=$_POST['course_name'];
     $course_description=$_POST['course_description'];
-    $course_creat_date	=$_POST['course_creat_date	'];
-    $course_id=$_POST= generateCourseID();
-  
+    $course_id= generateCourseID();
+    //Default teacher linked with course table, username: teacher , password: teacher
+    $teacher_id=905914;
 
 
 
     
 
-    $sql="INSERT INTO `course` (course_name, course_description, course_creat_date, course_id)
-    
-    VALUES (' $course_name', '  $course_description',  NOW(),'$course_id')";
+    $sql="INSERT INTO `course` (course_name, course_description, course_creat_date, course_id, teacher_id)
+     
+    VALUES ('$course_name', '$course_description',  NOW(), '$course_id' ,'$teacher_id')";
 
     $result=mysqli_query($con,$sql);
 
@@ -84,7 +84,7 @@ function generateCourseID() {
                 <input type="text" 
                 class="form-control"
                 name="course_name"
-                >
+               required >
 
             </div>
 
@@ -93,7 +93,7 @@ function generateCourseID() {
                 <label  class="form-label">Course Description</label>
                 <input type="text" 
                 class="form-control"
-                name="course_description"> 
+                name="course_description" required> 
 
             </div>
 

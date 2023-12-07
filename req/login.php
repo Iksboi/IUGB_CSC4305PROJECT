@@ -27,8 +27,6 @@ if ($resultAdmin->num_rows > 0) {
 } elseif ($resultStudent->num_rows > 0) {
     $rowStudent = $resultStudent->fetch_assoc();
     $_SESSION['student_id'] = $rowStudent['student_id'];
-
-   
     header('Location:student\student_home.php');
 
 } else {

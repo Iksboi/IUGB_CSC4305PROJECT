@@ -37,19 +37,19 @@ if (isset($_SESSION['student_id'])) {
       </div>
     </div>
   </div>
-
+  <div class="shadow w-450 p-3 text-center bg-light">
+<div class="row no-gutters">
   <div class="col-sm-4 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Enroll courses</h5>
-        <p class="card-text">Enroll a new class to which attend.</p>
-        <a href="enroll_course.php" class="btn btn-primary">Go to Enroll</a>
+        <h5 class="card-title">View grades</h5>
+        <p class="card-text">View your grades.</p>
+        <a href="" class="btn btn-primary">Go to courses</a>
       </div>
     </div>
   </div>
 
-
-
+ 
 
 </div>
 

@@ -4,7 +4,7 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: login.php");
+header("Location:/IUGB_CSC4305PROJECT/");
 exit;
 
 ?>
